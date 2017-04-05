@@ -1,26 +1,25 @@
 {
-  "name": "nodebb-plugin-login-jwt",
+  "name": "nodebb-plugin-session-login",
   "version": "0.0.1",
-  "description": "Example plugin for login with jwt",
+  "description": "Example plugin for session login",
   "main": "none",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subji/nodebb-plugin-login-jwt.git"
+    "url": "git+https://github.com/subji/nodebb-plugin-session-login.git"
   },
   "author": "Jisub Park <qkrwlrjq@gmail.com> (http://subji.github.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/subji/nodebb-plugin-login-jwt/issues"
+    "url": "https://github.com/subji/nodebb-plugin-session-login/issues"
   },
-  "homepage": "https://github.com/subji/nodebb-plugin-login-jwt#readme",
+  "homepage": "https://github.com/subji/nodebb-plugin-session-login#readme",
   "nbbpm": {
     "compatibility": "~1.2.x"
   },
   "dependencies": {
-    "jsonwebtoken": "^7.2.1",
     "winston": "^2.3.0"
   }
 }

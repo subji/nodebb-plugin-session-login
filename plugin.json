@@ -1,6 +1,6 @@
 {
-	"id": "nodebb-plugin-login-jwt",
-	"url": "https://github.com/subji/nodebb-plugin-login-jwt.git",
+	"id": "nodebb-plugin-session-login",
+	"url": "https://github.com/subji/nodebb-plugin-session-login.git",
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
