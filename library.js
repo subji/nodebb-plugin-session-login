@@ -37,7 +37,7 @@ plugin.addMiddleware = function (req, res, next)	{
 	nconf.set('mongo:database', 'biobank-session');	
 	var newdb = nconf.get('mongo:database');
 
-	mongocli.connect(url, function (err, db)	{
+	mongocli.connect(biourl, function (err, db)	{
 		console.log('connected');
 
 		db.close();
