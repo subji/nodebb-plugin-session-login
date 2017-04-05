@@ -34,7 +34,7 @@ plugin.addMiddleware = function (req, res, next)	{
 	db.init(function ()	{
 		nconf.set('mongo:database', 'biobank-session');	
 	});
-	console.log(db.questions);
+	console.log(nconf.get('mongo:database'));
 	console.log('login add middle ware!!', req.headers.cookie);
 	// 이미 있는 세션일 경우 요청 프로퍼티에 user 와 user 안에 uid 가 존재 한다.
 	// TODO.
