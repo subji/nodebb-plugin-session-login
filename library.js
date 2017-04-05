@@ -38,7 +38,11 @@ plugin.addMiddleware = function (req, res, next)	{
 	var newdb = nconf.get('mongo:database');
 
 	mongocli.connect(biourl, function (err, db)	{
-		console.log('connected');
+		var col = db.collection('sessions');
+
+		col.find({}).toArray(function (arr, docs)	{
+			console.dir(docs);
+		})
 
 		db.close();
 	})
