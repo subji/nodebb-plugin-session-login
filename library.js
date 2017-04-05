@@ -43,16 +43,12 @@ plugin.addMiddleware = function (req, res, next)	{
 	mongocli.connect(biourl, function (err, db)	{
 		var col = db.collection('sessions');
 
-		console.log(req.session._id)
+		console.log(req, '\n', req.session)
 
-		col.find({}).toArray(function (arr, docs)	{
-			console.dir(docs);
-		})
+		console.log(col.find({}))
 
 		db.close();
 	})
-
-	console.log('login add middle ware!!', req.headers.cookie);
 	// 이미 있는 세션일 경우 요청 프로퍼티에 user 와 user 안에 uid 가 존재 한다.
 	// TODO.
 	// 로그아웃 후 창을 닫고 바이오클라우드에서 다시 커뮤니티로 접속하면 세션관련 리프레쉬가 발생한다.
