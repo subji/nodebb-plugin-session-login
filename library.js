@@ -3,6 +3,8 @@
 var meta = module.parent.require('./meta');
 var user = module.parent.require('./user');
 
+var tdb = module.parent.require('./database/' + 'biobank-session')
+
 var db = module.parent.require('./database'); // NodeBB / src / database 참고.
 var au = module.parent.require('./controllers/authentication'); // NodeBB / src / controllers 참고.
 
