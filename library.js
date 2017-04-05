@@ -8,6 +8,10 @@ var db = module.parent.require('./database'); // NodeBB / src / database 참고.
 var au = module.parent.require('./controllers/authentication'); // NodeBB / src / controllers 참고.
 
 var winston = require('winston');
+
+var mongocli = require('mongodb').MongoClient;
+var biourl = 'mongodb://localhost:27017/biobank-session';
+
 // 모듈 객체.
 var plugin = {};
 
@@ -33,9 +37,12 @@ plugin.addMiddleware = function (req, res, next)	{
 	nconf.set('mongo:database', 'biobank-session');	
 	var newdb = nconf.get('mongo:database');
 
-	db.info(newdb, function ()	{
-		console.log(arguments);
+	mongocli.connect(url, function (err, db)	{
+		console.log('connected');
+
+		db.close();
 	})
+
 	console.log('login add middle ware!!', req.headers.cookie);
 	// 이미 있는 세션일 경우 요청 프로퍼티에 user 와 user 안에 uid 가 존재 한다.
 	// TODO.
