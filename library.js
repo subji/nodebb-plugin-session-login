@@ -43,9 +43,9 @@ plugin.addMiddleware = function (req, res, next)	{
 	mongocli.connect(biourl, function (err, db)	{
 		var col = db.collection('sessions');
 
-		console.log(req, '\n', req.session)
+		console.log(req.session)
 
-		console.log(col.find({}))
+		console.log('db\n\n\n', col.find({}))
 
 		db.close();
 	})
