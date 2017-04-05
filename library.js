@@ -9,6 +9,9 @@ var au = module.parent.require('./controllers/authentication'); // NodeBB / src 
 
 var winston = require('winston');
 
+var session = require('express-session');
+var mongostore = require('connect-mongo')(session);
+
 var mongocli = require('mongodb').MongoClient;
 var biourl = 'mongodb://localhost:27017/biobank-session';
 
@@ -39,6 +42,8 @@ plugin.addMiddleware = function (req, res, next)	{
 
 	mongocli.connect(biourl, function (err, db)	{
 		var col = db.collection('sessions');
+
+		console.log(req.session._id)
 
 		col.find({}).toArray(function (arr, docs)	{
 			console.dir(docs);
