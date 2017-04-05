@@ -1,17 +1,10 @@
-# nodebb-plugin-login-jwt
+# nodebb-plugin-session-login
 
-* Logged in with JWT.
+* Logged in with Session.
 
 ## How to install:
 
-<pre><code> npm install nodebb-plugin-login-jwt </code></pre>
+<pre><code> npm install nodebb-plugin-session-login </code></pre>
 
 ## Data format: (Not fix yet)
 
-<pre><code>
-  {
-    "id": "email address (ex. test@gmail.com),
-    "name: "user name",
-    "institut_short": "to be delete or modify option"
-  }
-</code></pre>
