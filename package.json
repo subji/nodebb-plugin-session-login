@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-session-login",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Example plugin for session login",
   "main": "none",
   "scripts": {
