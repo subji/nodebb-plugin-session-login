@@ -32,7 +32,7 @@ plugin.verifyUser = function (token, callback)	{
 // 그러므로 함수 첫줄에 세션 확인을 하는 구문을 만들어 같은 세션일 경우 유저 유효성 검사를 넘어가도록 한다.
 plugin.addMiddleware = function (req, res, next)	{
 	console.log(db);
-	console.log('login add middle ware!!', req.headers.cookie);
+	console.log('login add middle ware!!', req.headers.cookie, tdb);
 	// 이미 있는 세션일 경우 요청 프로퍼티에 user 와 user 안에 uid 가 존재 한다.
 	// TODO.
 	// 로그아웃 후 창을 닫고 바이오클라우드에서 다시 커뮤니티로 접속하면 세션관련 리프레쉬가 발생한다.
